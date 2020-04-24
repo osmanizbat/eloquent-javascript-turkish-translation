@@ -1,154 +1,64 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Giriş
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+Sistemi kendi amaçlarımız için oluşturduğumuzu düşünüyoruz.  Sanki kendi imajımızla yaptığımızı zannediyoruz ama bilgisayar gerçekte bizim gibi değil. Bazı yönlerimizin basit yansımasıdır:
+Bunlar mantık, düzen, kural ve netlik bölümleridir.
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Bu kitap bilgisayarlara talimatlar verme hakkındadır. Günümüzde bilgisayarlar neredeyse tornavida kadar yaygınlaşmış olsa da bundan biraz daha karmaşıktırlar ve bilgisayarlara istediklerimizi yaptırtmak her zaman kolay olmayabilir.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
+Eğer yapmanız gereken e-postalarınızı görüntüleme, matematiksel hesaplama yapma gibi genel, net tanımlanmış bir işlem ise ilgili uygulamayı açıp işinizi kolayca tamamlayabilirsiniz. Fakat biricik ve ucu açık işler için böyle bir uygulama muhtemelen yoktur.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+İşte bu noktada programlama devreye girebilir._Programlama_
+bir programı (bilgisayardan yapması istenilen kesin talimatlar listesi) inşa etme eylemidir. Bilgisayarlar aptal ve bilmiş yaratıklar olduklarından, programlama temelde sıkıcı ve sinir bozucudur.
 
-{{index [programming, "joy of"], speed}}
+Neyseki bu gerçeğin üstesinden gelebilir ve makinelerin anlayabildiği kavramlarla düşünme titizliğinden keyif alabilirseniz, programlamadan mükafatlanabilirsiniz. Manuel şekilde yaptığınızda sonsuza dek sürecek işleri belki de saniyeler içerisinde tamamlamanız mümkün olabilir. Programlama daha önce imkansız olan şeyleri bilgisayara yaptırabilmenin bir yoludur. Aynı zamanda soyut düşünme konusunda mükemmel bir alıştırmadır.
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Programlama çoğunlukla programla dilleriyle yapılır. Bir _progemlama dili_ bilgisayarlara talimatlar vermek için tasarlanmış yapay bir dildir. İlginç bir şekilde bilgisayarlarla iletişim için bulduğumuz en etkili yöntem birbirlerimizle iletişim yöntemimizden bir çok özelliği ödünç alır. Doğal diller gibi bilgisayar dilleri de kelime ve tabirlerin farklı biçimlerde bir araya getirilerek yeni kavramları ifade etme imkanı sunarlar.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+Bir noktada 1980 ve 1990 ların BASIC ve DOS gibi dil tabanlı arayüzleri, bilgisayarlarla etkileşimin ana yöntemiydi. Öğrenmesi daha kolay fakat daha kısıtlayıcı olan görsel arayüzler büyük oranda bunların yerini aldı. Nereye bakacağınızı bilirseniz bilgisayar dilleri halen varlığını sürdürmekteler. Bu dillerden biri olan JavaScript, tüm web tarayıcılarda dolayısıyla tüm cihazlarda gömülü olarak gelmektedir.  
 
-{{index [JavaScript, "availability of"], "casual computing"}}
+Bu kitap bu dille işe yarar ve eğlenceli şeyler yapabilecek kadar sizi tanıştırmaya çalışacaktır.
 
-At one point language-based interfaces, such as the BASIC and DOS
-prompts of the 1980s and 1990s, were the main method of interacting with
-computers. They have largely been replaced with visual interfaces,
-which are easier to learn but offer less freedom. Computer languages
-are still there, if you know where to look. One such language,
-JavaScript, is built into every modern web ((browser)) and is thus
-available on almost every device.
+## Programlama hakkında
 
-{{indexsee "web browser", browser}}
+JavaScript'le birlikte, programlamanın temel prensiplerini de tanıtacağım. Programlama, göründüğü kadarıyla zordur. Temel kurallar basit ve açıktır, fakat bu temeller üzerine inşa ettiğiniz programlar kendi kural ve karmaşasını doğuracak derecede karmaşıklaşma eğilimindedirler. Bir nevi kendi labirentinizi inşa ediyorsunuz ve içinde kaybolmanız an meselesi.
 
-This book will try to make you familiar enough with this language to
-do useful and amusing things with it.
+Bu kitabı okurken çok sıkıldığınız zamanlar olabilir. Eğer programlamada yeniyseniz çok sayıda yeni kavramla tanışmanız gerekecek. Bu kavramların bir çoğu daha sonra yeni bağlantılar kurmanızı gerektirecek şekillerde bir araya getirilecek.
 
-## On programming
-
-{{index [programming, "difficulty of"]}}
-
-Besides explaining JavaScript, I will introduce the basic
-principles of programming. Programming, it turns out, is hard. The
-fundamental rules are simple and clear, but programs built on top of
-these rules tend to become complex enough to introduce their own rules
-and complexity. You're building your own maze, in a way, and you might
-just get lost in it.
-
-{{index learning}}
-
-There will be times when reading this book feels terribly frustrating.
-If you are new to programming, there will be a lot of new material to
-digest. Much of this material will then be _combined_ in ways that
-require you to make additional connections.
-
-It is up to you to make the necessary effort. When you are struggling
-to follow the book, do not jump to any conclusions about your own
-capabilities. You are fine—you just need to keep at it. Take a break,
-reread some material, and make sure you read and understand the
-example programs and ((exercises)). Learning is hard work, but
-everything you learn is yours and will make subsequent learning
-easier.
+Gerekli gayreti sarfetmek sizin elinizde. Kitaba devam etmekte zorlandığınızda kendi yetenekleriniz konusunda hemen bir yargıya varmayın. İyi durumdasınız ama sadece devam etmelisiniz. Bir ara verin, konuyu tekrar okuyun ve örnek program ve alıştırmaları okuyup anladığınızdan emin olun. Öğrenmek zordur, fakat öğrendikleriniz sizindir ve sonraki öğrenmelerinizi daha da kolaylaştıracaktır.
 
 {{quote {author: "Ursula K. Le Guin", title: "The Left Hand of Darkness"}
 
-{{index "Le Guin, Ursula K."}}
+Eylem faydasızsa bilgini arttır, bilgi faydasızsa uyu.
 
 When action grows unprofitable, gather information; when information
 grows unprofitable, sleep.
 
 quote}}
 
-{{index [program, "nature of"], data}}
+Bir program bir çok şeydir. Programcının yazdığı bir metin parçasıdır, bilgisayarın yaptıklarını yönlendiren güçtür, bilgisayarın hafızasındaki veridir, ancak aynı hafıza alanında yapılan işlemleri de kontrol eder. Programları bilinen nesnelerle karşılaştıran benzetmeler yetersizdir. Yüzeysel olarak şöyle bir benzetme yapılabilir; birçok ayrı parça içeren ve bir bütün olarak çalışabilmesi için parçaların birbirleriyle bağlantı noktalarını ve işlemin bütünündeki rollerini dikkate almanız gereken bir makine.
 
-A program is many things. It is a piece of text typed by a programmer,
-it is the directing force that makes the computer do what it does, it
-is data in the computer's memory, yet it controls the actions
-performed on this same memory. Analogies that try to compare programs
-to objects we are familiar with tend to fall short. A superficially
-fitting one is that of a machine—lots of separate parts tend to be
-involved, and to make the whole thing tick, we have to consider the
-ways in which these parts interconnect and contribute to the operation
-of the whole.
+Bilgisayar bu soyut makineleri barındıran fiziksel bir makinedir. Bilgisayarlar sadece çok basit düzeydekki işlemleri kendi başlarına yapabilirler. Onları kullanışlı kılan şey bu basit işlemleri çok yüksek hızla yapabilmeleridir. Bir program muazzam sayıda basit işlemi kullanarak daha karmaşık işler gerçekleştirebilir.
 
-A ((computer)) is a physical machine that acts as a host for these immaterial
-machines. Computers themselves can do only stupidly straightforward
-things. The reason they are so useful is that they do these things at
-an incredibly high ((speed)). A program can ingeniously combine an
-enormous number of these simple actions to do very
-complicated things.
+Bir program bir düşüncenin binasdır. İnşa masrafı, ağırlığı olmayan ve klavyede yazan ellerimizin altında yükselen. 
 
-{{index [programming, "joy of"]}}
+Fakat dikkat edilmezse bir programın boyutu ve karmaşıklığı kontrolden çıkar ve hatta yazan kişide dahi kafa karıştıran hal alabilir. Programları kontrol altında tutma programlamanın temel problemidir. Programlama sanatı karmaşıklığı kontrol etme becerisidir. Büyük program kendi karmaşıklığı içerisine bastırıldı. 
 
-A program is a building of thought. It is costless to build, it is
-weightless, and it grows easily under our typing hands.
+Bazı programcılar programlarında sadece küçük bir dizi, çok iyi bilinen teknikleri kullanarak bu karmaşıklığı en iyi şekilde yönetililebileceklerine inanırlar. Programlarının biçimini ve güvenli sınırlarını belirleyen katı kuralları ve iyi pratikleri vardır.
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+Bu sıkıcı olduğu kadar, verimsizdir de. Yeni problemlere bazen yeni çözümler gerekir. Programlama yeni ve hızlı gelişmekte olan bir alandır ve yeni yaklaşımların yer alabileceği çeşitliliğe sahiptir. Program tasarlarken birçok kötü hatalar yapılabilir fakat devam etmeli düşündüğünüz gibi yapmalısınız ki programı anlayabilesiniz. İyi bir programın nasıl olması gerektiği algısı, kuralların öğrenilmesiyle değil pratikle gelişir. 
 
-{{index "programming style", "best practices"}}
+## Dil neden önemlidir?
 
-Some programmers believe that this complexity is best managed by using
-only a small set of well-understood techniques in their programs. They
-have composed strict rules ("best practices") prescribing the form
-programs should have and carefully stay within their safe little
-zone.
-
-{{index experiment}}
-
-This is not only boring, it is ineffective. New problems often
-require new solutions. The field of programming is young and still
-developing rapidly, and it is varied enough to have room for wildly
-different approaches. There are many terrible mistakes to make in
-program design, and you should go ahead and make them so that you
-understand them. A sense of what a good program looks like is
-developed in practice, not learned from a list of rules.
-
-## Why language matters
-
-{{index "programming language", "machine code", "binary data"}}
-
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+Bilgisayarların ortaya çıktığı ilk zamanlarda programlama yoktu.
+Programlar şuna benziyordu:
 
 ```{lang: null}
 00110001 00000000 00000000
@@ -162,45 +72,23 @@ languages. Programs looked something like this:
 01100010 00000000 00000000
 ```
 
-{{index [programming, "history of"], "punch card", complexity}}
+Bu 1'den 10'a kadar sayıları toplayıp sonucu yazdıran bir program: `1 + 2 + ... + 10 = 55`. Bu basit bir farazi makine üzerinde çalışabilir. İlk bilgisayarları programlamak için çok sayıda anahtarı doğru pozisyonda ayarlamanız veya karton şeritlere delikler açıp bilgisayara yüklemeniz gerekliydi. Ne kadar sıkıcı ve hataya yatkın bir işlem olduğunu tahmin edebiliyor olmalısınız. Basit programları yazmak dahi yüksek akıl ve titizlik gerektiriyordu. Daha karmaşık programlar neredeyse akıl almaz derecedeydi.
 
-That is a program to add the numbers from 1 to 10 together and print
-out the result: `1 + 2 + ... + 10 = 55`. It could run on a simple,
-hypothetical machine. To program early computers, it was necessary to
-set large arrays of switches in the right position or punch holes in
-strips of cardboard and feed them to the computer. You can probably
-imagine how tedious and error-prone this procedure was. Even writing
-simple programs required much cleverness and discipline. Complex ones
-were nearly inconceivable.
+Tabii ki bu gizemli 0'lar 1'ler dizilerini eliyle giriyor olmak programcıya güçlü sihirbazlık hisleri yaşatıyordu. Ve bunun iş memnuniyeti açısından bir değeri de olmalıydı.
 
-{{index bit, "wizard (mighty)"}}
+Yukarıdaki programın her bir satırı tek bir komut içeriyor. Basit İngilizce'yle şöyle yazılabilir:
 
-Of course, manually entering these arcane patterns of bits (the ones
-and zeros) did give the programmer a profound sense of being a mighty
-wizard. And that has to be worth something in terms of job
-satisfaction.
+ 1. 0 sayısını 0. hafıza alanına kaydet.
+ 2. 1 sayısını 1. hafıza alanına kaydet.
+ 3. 1\. hafıza alanınındaki sayıyı 2. hafıza alanına kaydet.
+ 4. 2\. hafıza alanınındaki sayıdan 11 çıkar.
+ 5. Eğer 2. hafıza alanındaki sayı 0 ise işleme 9. satırdan devam et.
+ 6. 1\. hafıza alanındaki sayıyı 2. hafıza alanına ekle.
+ 7. 1\. hafıza alanındaki sayıya 1 ekle
+ 8. 3\. adımdan devam et.
+ 9. 0\. hafıza alanındaki sayıyı yazdır. 
 
-{{index memory, instruction}}
-
-Each line of the previous program contains a single instruction. It
-could be written in English like this:
-
- 1. Store the number 0 in memory location 0.
- 2. Store the number 1 in memory location 1.
- 3. Store the value of memory location 1 in memory location 2.
- 4. Subtract the number 11 from the value in memory location 2.
- 5. If the value in memory location 2 is the number 0,
-    continue with instruction 9.
- 6. Add the value of memory location 1 to memory location 0.
- 7. Add the number 1 to the value of memory location 1.
- 8. Continue with instruction 3.
- 9. Output the value of memory location 0.
-
-{{index readability, naming, binding}}
-
-Although that is already more readable than the soup of bits, it is
-still rather obscure. Using names instead of numbers for the
-instructions and memory locations helps.
+0'lar v 1'ler çorbasından daha okunaklı olsa da yine de oldukça karışık. Direktfiler ve hafıza alanları için sayılar yerine isimler kullanmak işe yarar.  
 
 ```{lang: "text/plain"}
  Set “total” to 0.
@@ -215,24 +103,9 @@ instructions and memory locations helps.
 [end]
  Output “total”.
 ```
+Bu noktada programın nasıl çalıştığını görebiliyor musunuz? İlk iki satırda iki hafıza alanının başlangıç değerleri veriliyor. `total` değişkeni hesaplama sonuçlarının toplanması için kullanılacak ve `count` değişkeninde o sırada işlem yapılan sayı takip edilecek. `compare` geçen satırlar belki de en tuhaf olanlar. Program `count` değişkenini 11 ile kıyaslayarak sonlanması gerekip gerekmediğine karar veriyor. Farazi makinemiz biraz ilkel olduğu için sadece bir sayının 0'a eşit olup olmadığını kıyaslayaarak karar verebiliyor. Bu yüzden `compare` adlı hafıza alanını `count - 11` sonucunu hesaplamak ve buna göre karar vermek için kullanıyor. Sonraki iki satırda `count` değeri sonuca ekleniyor ve `count` değeri 11 olana dek her seferinde 1 arttırılıyor.
 
-{{index loop, jump, "summing example"}}
-
-Can you see how the program works at this point? The first two lines
-give two memory locations their starting values: `total` will be used
-to build up the result of the computation, and `count` will keep track
-of the number that we are currently looking at. The lines using
-`compare` are probably the weirdest ones. The program wants to see
-whether `count` is equal to 11 to decide whether it can stop
-running. Because our hypothetical machine is rather primitive, it can
-only test whether a number is zero and make a decision based
-on that. So it uses the memory location labeled `compare` to compute
-the value of `count - 11` and makes a decision based on that value.
-The next two lines add the value of `count` to the result and
-increment `count` by 1 every time the program has decided that `count`
-is not 11 yet.
-
-Here is the same program in JavaScript:
+Aynı programın JavaScript'le yazılışı:
 
 ```
 let total = 0, count = 1;
@@ -243,255 +116,68 @@ while (count <= 10) {
 console.log(total);
 // → 55
 ```
+Bu şekli biraz daha ilerleme sağlıyor. En önemlisi artık programın ileriye ve geriye nasıl atlaması gerektiğini belirtmemiz gerekmiyor. `while` yapısı bunu hallediyor. Verilen koşul doğru olduğu müddetçe süslü parantezler içerisindeki bloğu çalıştırmaya devam eder. `count <= 10` olarak verilen bu koşul “_count_ 10'dan küçük veya eşitse” anlamındadır. Bu sayede geçici bir değişken tutup sıfırla kıyaslamamıza gerek kalmıyor. Programlama dillerinin güçlü yönlerinden biri de bu gibi gereksiz detayları bizim için halletmeleridir.
 
-{{index "while loop", loop, [braces, block]}}
-
-This version gives us a few more improvements. Most important, there
-is no need to specify the way we want the program to jump back and
-forth anymore. The `while` construct takes care of that. It continues
-executing the block (wrapped in braces) below it as long as the
-condition it was given holds. That condition is `count <= 10`, which
-means “_count_ is less than or equal to 10”. We no longer have to
-create a temporary value and compare that to zero, which was just an
-uninteresting detail. Part of the power of programming languages is
-that they can take care of uninteresting details for us.
-
-{{index "console.log"}}
-
-At the end of the program, after the `while` construct has finished,
-the `console.log` operation is used to write out the result.
-
-{{index "sum function", "range function", abstraction, function}}
-
-Finally, here is what the program could look like if we happened to
-have the convenient operations `range` and `sum` available, which
-respectively create a ((collection)) of numbers within a range and
-compute the sum of a collection of numbers:
+`while` döngüsü bittikten sonra programın sonunda sonucu yazdırmak için `console.log` fonksiyonu kullanılıyor.
+ 
+Eğer bir aralıktaki sayılardan bir liste oluşturan`range` adlı bir fonksiyonumuz ve listedeki sayıları toplayan `sum` adlı bir fonksiyonumuz olsaydı programımız şöyle de olabilirdi.
 
 ```{startCode: true}
 console.log(sum(range(1, 10)));
 // → 55
 ```
+Bu hikayede anlatılmak istenen, bir program uzun veya kısa, okunaklı veya okunaksız olarak farklı şekillerde ifade edilebilir. Programın ilk şekli ileri derecede anlaşılmazken, son şekli neredeyse İngilizce gibi: 1'den 10'a kadar olan sayıların toplamını yazdır. ([Sonraki bölümlerde](data) `sum` ve `range` gibi fonksiyonların nasıl tanımlanacağını göreceğiz.) 
 
-{{index readability}}
+İyi bir programlama dili, bilgisayarın yapması gereken eylemleri programcının daha yüksek seviyede ifade edebilme imkanlarını sunar. Detaylardan kurtararak `while` ve `console.log` gibi kullanılışlı yapılar sağlar ve sum ve range gibi kendi fonksiyonlarınızı tanımlamanızı ve farklı biçimlerde kolayca bir araya getirmenize izin verir.
 
-The moral of this story is that the same program can be expressed in
-both long and short, unreadable and readable ways. The first version of the
-program was extremely obscure, whereas this last one is almost
-English: `log` the `sum` of the `range` of numbers from 1 to 10. (We
-will see in [later chapters](data) how to define operations like `sum`
-and `range`.)
 
-{{index ["programming language", "power of"], composability}}
+## JavaScript nedir?
 
-A good programming language helps the programmer by allowing them to
-talk about the actions that the computer has to perform on a higher
-level. It helps omit details, provides convenient building blocks
-(such as `while` and `console.log`), allows you to define your own
-building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+JavaScript 1995 yılında web sayfalarına programlar eklemek üzere Netscape Navigator web tarayıcısı içinde ortaya çıktı. Daha sonra diğer bir çok web tarayıcıda da kullanılmaya başlandı. Her kullanıcı eyleminde web sayfasının yeniden yüklenmesine gerek olmayan modern web uygulamalarının geliştirebilmesine imkan sağladı. Geleneksel web sitelerine çeşitli etkileşimli ve akıllı özelliklerin eklenmesinde de JavaScript kullanıldı. 
 
-## What is JavaScript?
+JavaScript'in Java programlama diliyle çok alakası olmadığını vurgulamak gerekir. Pazarlama kaygıları bu isim benzerliğinde etkili olmuştur. JavaScript ortaya çıktığında Java dilinin güçlü şekilde reklamı yapılmakta ve popülerliği artmaktaydı. Birileri bu rüzgarı arkasına almanın iyi bir fikir olacağını düşündü ve JavaScript ismi böyle kaldı.
 
-{{index history, Netscape, browser, "web application", JavaScript, [JavaScript, "history of"], "World Wide Web"}}
+Netscape dışında da kullanılmaya başlandıktan sonra, JavaScript desteklediğini iddia eden çeşitli yazılımların aynı dili konuşmalarını sağlamak için, dilin nasıl çalışması gerektiğini tarif eden standartlar belirlendi. Uluslararası Ecma organizasyonunun bu standartlaşmayı yapması sonrası buna ECMAScript standardı dendi. Pratikte ECMAScript ve JavaScript aynı dilin iki farklı adı olarak birbiri yerine kullanılabiliyor. 
 
-{{indexsee WWW, "World Wide Web"}}
+JavaScript hakkında _korkunç_ şeyler söyleyecek olanlar vardır. Bunların çoğu da doğrudur. JavaScript'le ilk defa bir şey yazmam gerektiğinde kısa sürede ondan nefret ettim. Yazdığım herşeyi kabul ediyordu fakat benim kastettiğimden bambaşka bir anlamda yorumluyordu. Bu, ne yaptığımı bilmiyor olmamla çok alakalıydı elbette fakat burada gerçek bir mesele var: JavaScript absürt bir liberallikte, verilen herşeyi kabul ediyor. Bu tasarımın arkakasındaki ana fikir yeni başlayanlar için JavaScript'le programlamayı kolaylaştırmaktı. Hakikatte çoğunlukla programlarınızdaki hataları bulmanızı zorlaştırır çünkü sistem onları size göstermez.
 
-{{indexsee Web, "World Wide Web"}}
+Bu esnekliğin avantajları da vardır gerçi. Daha katı dillerde kullanımı mümkün olmayan birçok farklı tekniğe imkan sağlar. Örneğin [10. Bölün](modules)'de göreceğiniz üzere, JavaScript'in bazı yetersizliklerini aşmada da kullanılabilir. Dili iyice öğrendikten ve onunla bir süre çalıştıktan sonra, JavaScript'i gerçekten _sevmeyi_ öğrendim.  
 
-JavaScript was introduced in 1995 as a way to add programs to web
-pages in the Netscape Navigator browser. The language has since been
-adopted by all other major graphical web browsers. It has made modern
-web applications possible—applications with which you can interact
-directly without doing a page reload for every action. JavaScript is also
-used in more traditional websites to provide various forms of
-interactivity and cleverness.
+JavaScript'in çeşitli versiyonları vardır. Yükselişe geçtiği  yaklaşık 2000 - 2010 yılları arasında yaygın olarak desteklenen ECMAScript 3. versiyonuydu. Bu süre zarfında, dilde radikal iyileştirmeler ve eklentiler planlanan iddialı 4. versiyonun çalışmaları devam ediyordu. Yaşayan ve yaygın bir dilde bu derece radikal değişikliklere gitmenin politik güçlükleri ortadaydı. 2008 yılında 4. versiyonun çalışmaları durduruldu ve 2009'da sadece tartışma konusu olmayan bazı iyileştirmelerle çıkacak olan 5. versiyona yol açıldı. Sonra 2015'te, 4. versiyonda planlanan bazı özellikleri de içeren 6. versiyon geldi. O zamandan beri her yıl küçük yeni güncellemeler gelmektedir.  
 
-{{index Java, naming}}
+Dilin gelişiyor olması web tarayıcıların sürekli ayak uydurmak zorunda olması demek ve eğer eski bir web tarayıcı kullanıyorsanız bütün özellikleri desteklemiyor olabilir. Dili tasarlayanlar eski programların çalışmasını aksatacak yeni değişiklikler yapmama konusunda dikkatlidirler. Bu sayede yeni web tarayıcılar eski programları halen çalıştırabilmektedir. Bu kitapta JavaScript'in 2017 versiyonunu kullanıyorum.
 
-It is important to note that JavaScript has almost nothing to do with
-the programming language named Java. The similar name was inspired by
-marketing considerations rather than good judgment. When JavaScript
-was being introduced, the Java language was being heavily marketed and
-was gaining popularity. Someone thought it was a good idea to try to
-ride along on this success. Now we are stuck with the name.
+JavaScript'in kullanıldığı tek platform web tarayıcılar değildir.
+MondoDB ve CouchDB gibi bazı veritabanlarında script ve sorgulama dili olarak JavaScript kullanılır. Çeşitli masaüstü ve sunucu programlama platformları, özellikle Node.js projesi ([20. Bölüm](node)'ün konusu), JavaScript'i web tarayıcılar dışındaki ortamlarda kullanım imkanı sağlar.
 
-{{index ECMAScript, compatibility}}
 
-After its adoption outside of Netscape, a ((standard)) document was
-written to describe the way the JavaScript language should work so
-that the various pieces of software that claimed to support JavaScript
-were actually talking about the same language. This is called the
-ECMAScript standard, after the Ecma International organization that
-did the standardization. In practice, the terms ECMAScript and
-JavaScript can be used interchangeably—they are two names for the same
-language.
+## Kodlar hakkında
 
-{{index [JavaScript, "weaknesses of"], debugging}}
+_Kod_ programı oluşturan metindir. Kitap birçok kod içermektedir. Kod okuyup yazmak programlamayı öğrenmenin ayrılmaz bir parçasıdır. Kod örneklerinin sadece üzerinden geçmeyip, dikkatlice okuyup anlamaya çalışın. Başlangıçta bu yavaş ve karmaşık gelebilir fakat çabucak kavrayacağınıza eminim. Alıştırmalar için de aynısı söz konusu. Gerçekten çalışan bir çözüm yazmadan anladığınızı düşünmeyin.
 
-There are those who will say _terrible_ things about JavaScript. Many
-of these things are true. When I was required to write something in
-JavaScript for the first time, I quickly came to despise it. It would
-accept almost anything I typed but interpret it in a way that was
-completely different from what I meant. This had a lot to do with the
-fact that I did not have a clue what I was doing, of course, but there
-is a real issue here: JavaScript is ridiculously liberal in what it
-allows. The idea behind this design was that it would make programming
-in JavaScript easier for beginners. In actuality, it mostly makes
-finding problems in your programs harder because the system will not
-point them out to you.
+Alıştırma çözümlerinizi bir JavaScript yorumlayıcı üzerinde denemenizi öneririm. Bu sayede yaptığınız şeyin çalışıp çalışmadığını görebilirsiniz. Deneyimlemenin cazibesiyle alıştırmaların ötesine geçmenizi umarım.
 
-{{index [JavaScript, "flexibility of"], flexibility}}
+Bu kitabı web tarayıcınızda okurken, bütün alıştırmaları üzerine tıklayarak düzenleyebilir ve çalıştırabilirsiniz.
 
-This flexibility also has its advantages, though. It leaves space for
-a lot of techniques that are impossible in more rigid languages, and
-as you will see (for example in [Chapter ?](modules)), it can be used
-to overcome some of JavaScript's shortcomings. After ((learning)) the
-language properly and working with it for a while, I have learned to
-actually _like_ JavaScript.
+Eğer kitaptaki programları kitabın sitesi dışında bir ortamda çalıştırmak isterseniz bazı noktalara dikkat etmelisiniz. Çoğu örnek, özel bir gereksinimi olmayan bağımsız uygulamalardır ve herhangi bir JavaScript ortamında çalışacaktır. Fakat ileriki bölümlerdeki çoğu kodlar belirli bir JavaScript ortamı (Web tarayıcı veya Node.js) için yazılmıştır ve sadece o ortamda çalışabilirler. Ek olarak bazı bölümler büyük programlar içerir ve buradaki bazı kodların diğer bazı kodlara ve harici dosyalardaki kodlara bağımlılığı vardır. [Sandbox](https://eloquentjavascript.net/code) sayfasından, her bölümdeki kodlar için gerekli scriptlere ve diğer dosyalara ulaşılabilir.
 
-{{index future, [JavaScript, "versions of"], ECMAScript, "ECMAScript 6"}}
+## Genel bakış
 
-There have been several versions of JavaScript. ECMAScript version 3
-was the widely supported version in the time of JavaScript's ascent to
-dominance, roughly between 2000 and 2010. During this time, work was
-underway on an ambitious version 4, which planned a number of radical
-improvements and extensions to the language. Changing a living, widely
-used language in such a radical way turned out to be politically
-difficult, and work on the version 4 was abandoned in 2008, leading to
-a much less ambitious version 5, which made only some uncontroversial
-improvements, coming out in 2009. Then in 2015 version 6 came out, a
-major update that included some of the ideas planned for version 4.
-Since then we've had new, small updates every year.
+Bu kitap kabaca üç kısımdan oluşmaktadır. İlk 12 bölümde JavaScript dili incelenir. Sonraki yedi bölümde web tarayıcılar ve web tarayıcıların JavaScript ile programlanması hakkındadır. Son iki bölüm de farklı bir JavaScript programlama ortamı olarak Node.js'e ayrılmıştır.
 
-The fact that the language is evolving means that browsers have to
-constantly keep up, and if you're using an older browser, it may not
-support every feature. The language designers are careful to not make
-any changes that could break existing programs, so new browsers can
-still run old programs. In this book, I'm using the 2017 version of
-JavaScript.
+Kitapta gerçek programlama hakkında fikir edinebileceğiniz beş _proje bölümü_ bulunmaktadır. Sırasıyla, bir [kurye robot](robot), bir [programmlama dili](language), bir [platform oyunu](game), bir [piksel boyama programı](paint) ve bir [dinamik websitesi](skillsharing) geliştirilmesi üzerinde çalışacağız.
 
-{{index [JavaScript, "uses of"]}}
+Dil ile ilgili ilk dört bölümde JavaScript'teki temel yapılar tanıtılıyor. [Kontrol yapıları](program_structure) (girişte gördüğünüz `while` vb.), [fonksiyonlar](functions) (kendi yazacağınız yapı blokları) ve [veri yapıları](data) tanıtılıyor. Bunlardan sonra basit programları yazabileceksiniz. Sonra [5.](higher_order) ve [6.](object) bölümlerde daha _soyut_ kodlar yazarak karmaşıklığı kontrol altına alabilmeniz için fonksiyonları ve nesneleri kullanacağınız teknikleri öğreneceksiniz.
 
-Web browsers are not the only platforms on which JavaScript is used.
-Some databases, such as MongoDB and CouchDB, use JavaScript as their
-scripting and query language. Several platforms for desktop and server
-programming, most notably the ((Node.js)) project (the subject of
-[Chapter ?](node)), provide an environment for programming JavaScript
-outside of the browser.
+[İlk proje bölümü](robot)'ünden sonra, [hata yönetimi ve hata çözme](error), [düzenli ifadeler](regexp) (metinlerle çalışmada önemli bir araç), [modülerlik](modules) (karmaşıklığı önlemede önemli bir konu) ve [asenkron programlama](async) (zaman alan olayları yönetme) bölümleriyle devam ediliyor. [İkinci prpje bölümüyle](language) kitabın ilk kısmı tamamlanıyor.
 
-## Code, and what to do with it
+İkinci kısımda [13.](browser) bölümden [19.](paint) bölüme kadar, web tarayıcıda JavaScript'le kullanılabilecek araçlar anlatılıyor. Nesnelerin ekranda nasıl gösterileceğini ([14.](dom) ve [17.](canvas)bölümler), kullanıcı girdilerine yanıt ([15. bölüm](event)) ve network iletişimini ([18. bölüm](http)) öğreneceksiniz. Yine bu kısımda da iki proje bölümü yer alıyor.  
 
-{{index "reading code", "writing code"}}
+Daha sonra [20.](node)bölümde Node.js anlatılacak ve [21.](skillsharing) bölümde Node.js kullanılarak küçük bir web sitesi geliştirilecek.
 
-_Code_ is the text that makes up programs. Most chapters in this book
-contain quite a lot of code. I believe reading code and writing ((code))
-are indispensable parts of ((learning)) to program. Try to not just
-glance over the examples—read them attentively and understand them.
-This may be slow and confusing at first, but I promise that you'll
-quickly get the hang of it. The same goes for the ((exercises)). Don't
-assume you understand them until you've actually written a working
-solution.
+## Tipografik düzen
 
-{{index interpretation}}
-
-I recommend you try your solutions to exercises in an actual
-JavaScript interpreter. That way, you'll get immediate feedback on
-whether what you are doing is working, and, I hope, you'll be tempted
-to ((experiment)) and go beyond the exercises.
-
-{{if interactive
-
-When reading this book in your browser, you can edit (and run) all
-example programs by clicking them.
-
-if}}
-
-{{if book
-
-{{index download, sandbox, "running code"}}
-
-The easiest way to run the example code in the book, and to experiment
-with it, is to look it up in the online version of the book at
-[_https://eloquentjavascript.net_](https://eloquentjavascript.net/). There,
-you can click any code example to edit and run it and to see the
-output it produces. To work on the exercises, go to
-[_https://eloquentjavascript.net/code_](https://eloquentjavascript.net/code),
-which provides starting code for each coding exercise and allows you
-to look at the solutions.
-
-if}}
-
-{{index "developer tools", "JavaScript console"}}
-
-If you want to run the programs defined in this book outside of the
-book's website, some care will be required. Many examples stand on their
-own and should work in any JavaScript environment. But code in later
-chapters is often written for a specific environment (the browser or
-Node.js) and can run only there. In addition, many chapters define
-bigger programs, and the pieces of code that appear in them depend on
-each other or on external files. The
-[sandbox](https://eloquentjavascript.net/code) on the website provides
-links to Zip files containing all the scripts and data files
-necessary to run the code for a given chapter.
-
-## Overview of this book
-
-This book contains roughly three parts. The first 12 chapters discuss
-the JavaScript language. The next seven chapters are about web
-((browsers)) and the way JavaScript is used to program them. Finally,
-two chapters are devoted to ((Node.js)), another environment to
-program JavaScript in.
-
-Throughout the book, there are five _project chapters_, which describe
-larger example programs to give you a taste of actual programming. In
-order of appearance, we will work through building a [delivery
-robot](robot), a [programming language](language), a [platform
-game](game), a [pixel paint program](paint), and a [dynamic
-website](skillsharing).
-
-The language part of the book starts with four chapters that introduce
-the basic structure of the JavaScript language. They introduce
-[control structures](program_structure) (such as the `while` word you
-saw in this introduction), [functions](functions) (writing your own
-building blocks), and [data structures](data). After these, you will
-be able to write basic programs. Next, Chapters [?](higher_order) and
-[?](object) introduce techniques to use functions and objects to write
-more _abstract_ code and keep complexity under control.
-
-After a [first project chapter](robot), the language part of the book
-continues with chapters on [error handling and bug fixing](error),
-[regular expressions](regexp) (an important tool for working with
-text), [modularity](modules) (another defense against complexity), and
-[asynchronous programming](async) (dealing with events that take
-time). The [second project chapter](language) concludes the first part
-of the book.
-
-The second part, Chapters [?](browser) to [?](paint), describes the
-tools that browser JavaScript has access to. You'll learn to display
-things on the screen (Chapters [?](dom) and [?](canvas)), respond to
-user input ([Chapter ?](event)), and communicate over the network
-([Chapter ?](http)). There are again two project chapters in this
-part.
-
-After that, [Chapter ?](node) describes Node.js, and [Chapter
-?](skillsharing) builds a small website using that tool.
-
-{{if commercial
-
-Finally, [Chapter ?](fast) describes some of the considerations that
-come up when optimizing JavaScript programs for speed.
-
-if}}
-
-## Typographic conventions
-
-{{index "factorial function"}}
-
-In this book, text written in a `monospaced` font will represent
-elements of programs—sometimes they are self-sufficient fragments, and
-sometimes they just refer to part of a nearby program. Programs (of
-which you have already seen a few) are written as follows:
+Bu kitapta program kodları `monospaced` fontla gösterilecektir. Örnek:
 
 ```
 function factorial(n) {
@@ -503,15 +189,11 @@ function factorial(n) {
 }
 ```
 
-{{index "console.log"}}
-
-Sometimes, to show the output that a program produces, the
-expected output is written after it, with two slashes and an arrow in
-front.
+Bazen o kodun beklenen çıktısı hemen sonraki satırda, // -> karakterlerinden sonra gösterilecektir.
 
 ```
 console.log(factorial(8));
 // → 40320
 ```
 
-Good luck!
+Bol şans!
